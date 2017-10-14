@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+#bottom_nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+}
+
+#bottom_nav img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+}
+
+#bottom_nav img:hover, #bottom_nav img:active {
+  opacity: 0.5;
+}
+
+#nav {
+  background-color: rgb(87, 184, 85);
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#content {
+  position: relative;
+  top: 78px;
+  padding: 15px;
+}
+
+#content > .container > div {
+  padding: 78px 0;
+}
+
+hr.bar {
+  border: 2px solid rgb(87, 184, 85);
+  width: 100%;
+}
+
+.menu {
+  float: right;
+}
+
+.menu li { /* .menu 看起來只是一個fake class */
+  list-style-type: none; /*去除li的起頭符號*/
+
+  border: 1px solid white;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+
+  display: inline-block;  /*使各個li可以橫向接續排列*/
+}
+
+a {
+  display: block;
+  color: white;
+  text-decoration: none;  /*remove the under-line mark on anchor*/
+}
+
+li:hover  {
+  border: 1px solid #ff6600;
+  background-color: #fff;
+}
+
+li:hover a {
+  color: #ff6600;
+  background-color: #fff;
+  font-weight: 800;
+}
+#my-photo, #my-info {
+  display: inline-block;
+}
+
+#my-photo {
+  float: left;
+  margin-right: 20px;
+}
+
+#my-photo img {
+  width: 400px;
+}
+
+h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#about h1 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+h3 {
+  margin: 0;
+}
+
+hr {
+  border: 0.5px solid #eee;
+}
+
+table {
+  font-size: 14px;
+  text-align: left;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+td {
+  color: #666;
+  padding-left: 10px;
+}
+
+
+#my-work-gallery {
+    text-align: center;
+}
+
+/* my work */
+/*Unit : 70*/
+.item {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  margin: 10px;
+  /*max-width: 30%;*/
+}
+
+.item img {
+  width: 100%;
+}
+
+.item-info {
+  border: 1px solid red;                    /* 標示用，排版完記得拿掉 */
+  background-color: rgba(255,255,255,.6);   /* 背景半透明 */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  padding: 25px 10px;
+
+  display: none; /*招式一, display: from none -> block*/
+
+  /*opacity: 0;  /*招式二, set opacity to zero when non-hover*/
+}
+
+.item:hover .item-info { /*招式一, display: from none -> block, 無法直接在.item-info用hover叫出動作, 要退回.item做*/
+  display: block;
+}
+
+/* 招式二
+.item-info:hover {
+  opacity: 1;
+}*/
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row input, .form-row textarea {
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #D6D9DC;
+  padding: 7px;
+}
+
+.form-row label {
+  color: rgb(124, 215, 97);
+}
+.form-row input {
+  color : rgb(82, 139, 91);
+}
+
+
+.form-row input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px rgb(169, 246, 156) inset;
+    -webkit-text-fill-color: green;
+}
+.form-row input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px rgb(169, 246, 156) inset;
+    -webkit-text-fill-color: green;
+}
+
+#message {
+  color: rgb(22, 44, 162);
+}
+
+.form-row textarea {
+  resize: none;
+  height: 5em;
+}
+
+.form-row button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-row button[type="sumbit"] {
+  background-color: #5995DA;
+  color: #FFFFFF;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}
