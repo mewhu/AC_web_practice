@@ -130,26 +130,33 @@ td {
 }
 
 
-#my-work-gallery {
+#my-children-gallery {
     text-align: center;
 }
 
 /* my work */
 /*Unit : 70*/
-.item {
+.column-item {
   display: inline-block;
   position: relative;
   width: 30%;
   margin: 10px;
-  /*max-width: 30%;*/
+  vertical-align: middle;
 }
 
-.item img {
+.column-item img {
   width: 100%;
+  height: 100%;
+}
+
+.row-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .item-info {
-  border: 1px solid red;                    /* 標示用，排版完記得拿掉 */
   background-color: rgba(255,255,255,.6);   /* 背景半透明 */
 
   position: absolute;
@@ -162,19 +169,22 @@ td {
   text-align: center;
   padding: 25px 10px;
 
-  display: none; /*招式一, display: from none -> block*/
+/*招式一, display: from none -> block*/
+  /*display: none;*/
 
-  /*opacity: 0;  /*招式二, set opacity to zero when non-hover*/
+/*招式二, set opacity to zero when non-hover*/
+  opacity: 0;
 }
 
-.item:hover .item-info { /*招式一, display: from none -> block, 無法直接在.item-info用hover叫出動作, 要退回.item做*/
+/*招式一, display: from none -> block, 無法直接在.item-info用hover叫出動作, 要退回.item做*/
+/*.column-item:hover .item-info {
   display: block;
-}
+}*/
 
-/* 招式二
+ /*招式二*/
 .item-info:hover {
   opacity: 1;
-}*/
+}
 
 .contact-form {
   width: 50%;
